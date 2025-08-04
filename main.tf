@@ -5,7 +5,7 @@ resource "aws_vpc" "main" {
     cidr_block = "50.0.0.0/16"
     enable_dns_support = true
     enable_dns_hostnames = true
-    tags = { Name = "my-vpc-element" }
+    tags = { Name = "my-vpc-element-project" }
   
 }
 
@@ -81,7 +81,7 @@ resource "aws_instance" "rhel_linux" {
     vpc_security_group_ids = [aws_security_group.multi_sg["ssh"].id]
 
     tags = {
-      Name = "rhel-linux-${count.index + 1}"
+      Name = "rhel-rhel-linux-${count.index + 1}"
     }
   
 }
