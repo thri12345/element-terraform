@@ -81,7 +81,7 @@ resource "aws_instance" "rhel_linux" {
     vpc_security_group_ids = [aws_security_group.multi_sg["ssh"].id]
 
     tags = {
-      Name = "rhel-rhel-linux-${count.index + 1}"
+      Name = "RHEL-linux-${count.index + 1}"
     }
   
 }
